@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Incluyo clases bootstrap-->
+    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./public/css/estilos.css">
+    <link rel="icon" href="favicon.ico?" type="image/x-icon" />
+    <script src="./public/js/scripts.js" type="module" defer></script>
+    <title>Recuperatorio SP LAB 3</title>
+</head>
+
+<body>
+    <header>
+        <img src="./public/img/logo.svg" alt="logo">
+        <nav>
+            <a href="#">Nosotros</a>
+            <a href="#">Anuncios</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="tituloPrincipal">
+        <h1>Administracion</h1>
+        <img src="./public/img/fotoMascotas.jpg" alt="imagen de mascotas">
+    </section>
+
+    <h2 class="subtitulo">Completa el formulario para dar de alta un anuncio</h2>
+
+    <div class="card text-center bg-info text-dark w-50">      
+
+        <div class="card-header bg-light"><span>Información Del Anuncio</span></div>
+
+        <div class="card-body">
+            <form>
+                <label>Titulo:</label>
+                <input type="text" id="txtTitulo" autocomplete="off" placeholder="Titulo"><br><br>
+
+                <label>Descripcion:</label>
+                <input type="text" id="txtDescripcion" autocomplete="off" placeholder="Descripcion"><br><br>
+
+                <label>Precio:</label>
+                <input type="text" id="txtPrecio" autocomplete="off" placeholder="Precio"><br><br>
+
+                <legend id="campoAnimal">Animal:</legend>
+                <fieldset class="checkbox border border-ligth">
+
+                    <label for="rdoPerro"><input type="radio" name="animal" id="rdoPerro" value="perro"
+                            checked />PERRO</label>
+                    <br /><br />
+
+                    <label for="rdoGato"><input type="radio" name="animal" id="rdoGato" value="gato" />GATO</label>
+                    <br /><br />
+                </fieldset>
+
+                <div id="contenedorInputs">
+                    <img src="./public/img/iconoRaza.svg" alt="iconoRaza" class="icono">
+                    <input type="text" id="txtRaza" placeholder="Raza" autocomplete="off"><br>
+                    <img src="./public/img/iconoFechaNacimiento.svg" alt="iconoFechaNacimiento" class="icono">
+                    <input type="text" id="txtFechaNacimiento" placeholder="dd/mm/aaaa" autocomplete="off"><br>
+                    <img src="./public/img/iconoVacuna.svg" alt="iconoVacuna" class="icono">
+                    <select id="cmb">
+                        <option value="">---Elegir---</option>
+                        <option value="Si">SI</option>
+                        <option value="No">NO</option>
+                    </select><br><br>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="contenedorBotones">
+        <button class="boton" id="btnAlta"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Alta Anuncio</button>
+        <button class="boton" id="btnModificar"><i class="fa fa-scissors fa-2x" aria-hidden="true"></i> Modificar
+            Anuncio</button>
+        <button class="boton" id="btnEliminar"><i class="fa fa-trash fa-2x" aria-hidden="true"></i> Eliminar
+            Anuncio</button>
+        <button class="boton" id="btnCancelar"><i class="fa fa-undo fa-2x" aria-hidden="true"></i> Cancelar</button>
+    </div>
+    
+    <br/>
+
+    <div class="card text-center bg-info text-dark w-50">      
+        <div class="card-header bg-light"><span>Filtrar tabla por animal</span></div>
+        <div class="card-body">
+            <form>
+                <label>Animal:</label>
+                <select id="cmbAnimal" class="btn-primary bg-warning">
+                    <option value="">---Elegir---</option>
+                    <option value="todos">Todos</option>
+                    <option value="perro">Perro</option>
+                    <option value="gato">Gato</option>
+                </select><br><br>
+                <label>Precio promedio:</label>
+                <input type="text" id="txtPrecioPromedio" autocomplete="off"><br><br>
+                <label>Precio maximo:</label>
+                <input type="text" id="txtPrecioMaximo" autocomplete="off"><br><br>
+                <label>Precio minimo:</label>
+                <input type="text" id="txtPrecioMinimo" autocomplete="off"><br><br>
+                <label>% de animales vacunados:</label>
+                <input type="text" id="txtPrecioPorctenjaVacunados" autocomplete="off"><br><br>
+            </form>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="card text-center bg-info text-dark w-50">      
+        <div class="card-header bg-light"><span>Filtrar tabla por columnas</span></div>
+
+        <div class="card-body">
+
+            <form class="contenedorBotones">
+
+                <label for="cbTitulo">Titulo</label><br><br>
+                <input type="checkbox" id="cbTitulo" value="titulo" class="checkBoxInput" checked="true">
+
+                <label for="cbTransaccion">Transaccion</label><br><br>
+                <input type="checkbox" id="cbTransaccion" value="transaccion" class="checkBoxInput" checked="true">
+
+                <label for="cbDescripcion">Descripcion</label><br><br>
+                <input type="checkbox" id="cbDescripcion" value="descripcion" class="checkBoxInput" checked="true">
+
+                <label for="cbPrecio">Precio</label><br><br>
+                <input type="checkbox" id="cbPrecio" value="precio" class="checkBoxInput" checked="true">
+
+                <label for="cbAnimal">Animal</label><br><br>
+                <input type="checkbox" id="cbAnimal" value="animal" class="checkBoxInput" checked="true">
+
+                <label for="cbRaza">Raza</label><br><br><br>
+                <input type="checkbox" id="cbRaza" value="raza" class="checkBoxInput" checked="true">
+
+                <label for="cbFechaNacimiento">Fecha_Nacimiento</label><br><br>
+                <input type="checkbox" id="cbFechaNacimiento" value="fechaNacimiento" class="checkBoxInput" checked="true">
+
+                <label for="cbVacuna">Vacuna</label><br><br>
+                <input type="checkbox" id="cbVacuna" value="vacuna" class="checkBoxInput" checked="true">
+            </form>
+        </div>  
+    </div>
+
+    <br/>
+
+    <h2 class="subtitulo">Haga click en la tabla para modificar o eliminar</h2>
+
+    <section class="contenedor text-dark">
+
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw" id="spinner"></i>
+
+        <div id="divTabla"></div>
+
+    </section>
+
+    <footer>
+        <nav>
+            <a href="#">Nosotros</a>
+            <a href="#">Anuncios</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <p>Todos los derechos reservados 2020 &copy;</p>
+
+    </footer>
+
+</body>
+
+</html>

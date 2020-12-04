@@ -1,0 +1,59 @@
+{
+  "anuncios": [
+    {
+      "titulo": "Venta perro cocker",
+      "transaccion": "venta",
+      "descripcion": "Perro cocker con vacunas",
+      "precio": "7500",
+      "animal": "perro",
+      "raza": "cocker",
+      "fechaNacimiento": "10/03/2020",
+      "vacuna": "Si",
+      "id": 8
+    },
+    {
+      "titulo": "Venta gato siames",
+      "transaccion": "venta",
+      "descripcion": "Gato siames con vacunas",
+      "precio": "8000",
+      "animal": "gato",
+      "raza": "siames",
+      "fechaNacimiento": "06/06/2020",
+      "vacuna": "Si",
+      "id": 10
+    },
+    {
+      "titulo": "Venta gato esfinge",
+      "transaccion": "venta",
+      "descripcion": "Gato esfinge con vacunas",
+      "precio": "4500",
+      "animal": "gato",
+      "raza": "esfinge",
+      "fechaNacimiento": "23/2/2020",
+      "vacuna": "Si",
+      "id": 11
+    },
+    {
+      "titulo": "Venta perro caniche",
+      "transaccion": "venta",
+      "descripcion": "Perro caniche sin vacunas",
+      "precio": "6000",
+      "animal": "perro",
+      "raza": "caniche",
+      "fechaNacimiento": "03/03/2020",
+      "vacuna": "No",
+      "id": 12
+    },
+    {
+      "titulo": "Venta gato con smoking",
+      "transaccion": "venta",
+      "descripcion": "Gato con smoking con vacunas",
+      "precio": "3500",
+      "animal": "gato",
+      "raza": "con smoking",
+      "fechaNacimiento": "05/05/2020",
+      "vacuna": "Si",
+      "id": 14
+    }
+  ]
+}

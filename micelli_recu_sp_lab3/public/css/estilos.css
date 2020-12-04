@@ -1,0 +1,288 @@
+* {
+    /*Por ejemplo que los links no queden subrayados*/
+    text-decoration: none;
+    /*Esto dijo el profe que hay que ponerlo siempre*/
+    box-sizing: border-box;
+    /*Defino la fuente a usar y los backups, La fuente nueva la declare al fondo*/
+    font-family: "miFuente", sans-serif, serif, monospace;
+}
+
+/*
+*********************************
+* HEADER - H2 - NAV - TIT.PRNCP *
+*********************************
+*/
+
+header {
+    /*Ocupa el 100% del ancho disponible y solo 100px de la altura disponible*/
+    width: 100%;
+    height: 100px;
+    /*Para que aparezca con los bordes redondos*/
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    background-color: rgb(72, 176, 202);
+    align-items: center;
+}
+
+header > img {
+    /*La imagen ocupa 60px del total de altura disponible. Se aplica al logo*/
+    height: 60px;
+}
+
+header, footer{
+    /*Display flexible para que se adapte al espacio disponible. Es flexible y no rigido*/
+    display: flex;
+    /*justify-content: Define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.*/
+    /*space-around: Los items flex se alinean uniformemente de tal manera que el espacio entre dos items adyacentes es el mismo.*/
+    justify-content: space-around;
+    align-items: center;
+}
+
+h2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: larger;
+}
+
+nav {
+    display: flex;
+}
+  
+/*Aplica a los vinculos de la barra de navegacion*/
+nav a {
+    /*El margen de cada vinculo hacia la izquierda. Le agrego separacion entre uno y otro*/
+    margin-left: 30px;
+    color: white;
+    /*Agregue relleno top y rigth*/
+    padding: 5px 10px;
+}
+
+/*Aplica a los contenidos del todo elemento con id = tituloPrincipal*/
+#tituloPrincipal {
+    display: flex;
+    /*Alinea los items flexibles en columna y no en fila*/
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Especificamente aplica a las imagenes de los elementos de id = tituloPrincipal*/
+#tituloPrincipal > img {
+    /*Le pongo un tope a la altura de la imagen*/
+    max-height: 350px;
+    width: 100%;
+}
+
+@media (max-width: 900px){
+    header{
+    flex-direction: column;
+        
+    }
+}
+
+/*
+*********************************
+*   ELEMENTOS DEL FORMULARIO    *
+*********************************
+*/
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+label, legend{
+    font-weight: bold;
+}
+
+input[type ="text"]{
+    border: none;
+    background-color: lightgray;
+    width: 100%;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+fieldset {
+    /*Esto alinea el formulario al centro*/
+    margin-left: 25%;
+    width: 50%;
+}
+
+#cmb, #cmbAnimal{
+    width: 100%;
+    border: none;
+    background-color: lightgray;
+    width: 100%;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+
+#contenedorInputs{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: space-evenly;
+}
+
+#contenedorInputs > input {
+    height: 25px;
+    margin-left: 5px;
+    margin: 10px;
+    justify-content: space-evenly;
+    justify-content: center;
+}
+
+/*Configura el tamaño de los iconos*/
+.icono{
+    height: 30px;
+    width: 30px;
+}
+
+@media (min-width: 1000px){
+    #contenedorInputs{
+        flex-direction: row;
+    }
+}
+
+/*
+*********************************
+*           FOOTER              *
+*********************************
+*/
+
+footer {
+    margin-top: 20px;
+    background-color: rgb(72, 176, 202);
+    border-radius: 5px;
+}
+  
+footer p {
+    color: white;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 600px){
+    footer{
+        flex-direction: column;
+        margin-top: 0;
+    }
+}
+
+/*
+*********************************
+*           BOTONES             *
+*********************************
+*/
+
+.contenedorBotones {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    /*Los elementos se re agrupan a una nueva fila cuando en la actual no hay suciente espacio para todos. Asi los 
+    elementos van "colapsando" y no se achican o agrandan unos sobre otros, sino que van adoptando nuevas posiciones*/
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.boton {
+    margin-left: 10px;
+}
+
+.checkBoxInput{
+    margin-right: 10px;
+}
+
+button {
+    top: 5px;
+    position: relative;
+    display: inline-block;
+    border: none;
+    padding: 7px 11px;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background-color: rgb(72, 72, 202);
+    cursor: pointer;
+}
+
+#btnModificar, #btnEliminar, #btnCancelar {
+    display: none;
+}
+
+/*
+*********************************
+*         TABLA - SPINNER       *
+*********************************
+*/
+
+/*Aplico contenidos por clase. Esto es de la tabla*/
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    width: fit-content;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: orange;
+}
+
+table, th, td{
+
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+#spinner{
+    align-self: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*css para bootstrap*/
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.subtitulo{
+    font-size: 150%;
+}
+
+/*
+*********************************
+*            FUENTE             *
+*********************************
+*/
+
+/*Defino una nueva fuente, le paso un nombre y un path. Una vez que defino mi fuente la puedo utilizar*/
+@font-face{
+    font-family: "miFuente";
+    src: url(../fuentes/miFuente.ttf);
+}
